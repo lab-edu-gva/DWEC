@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Validación de Formularios - DWEC</title>
+  <style>
+    .campo { margin-bottom: 12px; }
+    .error { color: red; font-size: 0.85em; display: none; }
+    input.invalido { border: 2px solid red; }
+  </style>
+</head>
+<body>
+  <h2>Registro de Usuario</h2>
+  <form id="formRegistro">
+    <div class="campo">
+      <label>Nombre de usuario:</label><br>
+      <input type="text" id="nombre">
+      <span class="error" id="errorNombre">El nombre debe tener al menos 3 caracteres.</span>
+    </div>
+
+    <div class="campo">
+      <label>Correo Electrónico:</label><br>
+      <input type="text" id="email">
+      <span class="error" id="errorEmail">Introduce un correo electrónico válido.</span>
+    </div>
+
+    <button type="submit">Crear Cuenta</button>
+  </form>
+
+  <script src="valida2.js"></script>
+</body>
+</html>
