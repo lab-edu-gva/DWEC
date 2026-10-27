@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 3 - Cambio de Contraseña</title>
+  <style>
+    .campo { margin-bottom: 15px; }
+    .error { color: red; font-size: 0.85em; display: none; margin-top: 4px; }
+    
+    /* Clases para el feedback en tiempo real */
+    input.coincide { border: 2px solid green; outline: none; }
+    input.no-coincide { border: 2px solid red; outline: none; }
+  </style>
+</head>
+<body>
+  <h2>Actualizar Clave de Acceso</h2>
+  <form id="formPassword" novalidate>
+    <!-- Contraseña Actual -->
+    <div class="campo">
+      <label for="actual">Contraseña actual:</label><br>
+      <input type="password" id="actual">
+      <div class="error" id="errorActual">La contraseña actual es obligatoria.</div>
+    </div>
+
+    <!-- Nueva Contraseña -->
+    <div class="campo">
+      <label for="nueva">Nueva contraseña:</label><br>
+      <input type="password" id="nueva">
+      <div class="error" id="errorNueva">
+        Mínimo 8 caracteres, al menos un número, una mayúscula y diferente a la actual.
+      </div>
+    </div>
+
+    <!-- Repetir Nueva Contraseña -->
+    <div class="campo">
+      <label for="repetir">Repetir nueva contraseña:</label><br>
+      <input type="password" id="repetir">
+      <div class="error" id="errorRepetir">Las contraseñas no coinciden.</div>
+    </div>
+
+    <button type="submit">Guardar Nueva Contraseña</button>
+  </form>
+
+  <script src="ejercicio3.js"></script>
+</body>
+</html>
