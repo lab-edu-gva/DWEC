@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 2 - Reserva de Entradas</title>
+  <style>
+    .campo { margin-bottom: 15px; }
+    .error { color: red; font-size: 0.85em; display: none; margin-top: 4px; }
+    input.invalido, select.invalido { border: 2px solid red; }
+  </style>
+</head>
+<body>
+  <h2>Reserva de Entradas para Taller Técnico</h2>
+  <form id="formReserva" novalidate>
+    <!-- Fecha de asistencia -->
+    <div class="campo">
+      <label for="fecha">Fecha de asistencia:</label><br>
+      <input type="date" id="fecha">
+      <div class="error" id="errorFecha">La fecha no puede ser anterior al día de hoy.</div>
+    </div>
+
+    <!-- Tipo de entrada (Select) -->
+    <div class="campo">
+      <label for="tipoEntrada">Tipo de entrada:</label><br>
+      <select id="tipoEntrada">
+        <option value="">-- Seleccione una opción --</option>
+        <option value="general">General</option>
+        <option value="vip">VIP</option>
+        <option value="estudiante">Estudiante</option>
+      </select>
+      <div class="error" id="errorTipo">Debes seleccionar un tipo de entrada válido.</div>
+    </div>
+
+    <!-- Política de cancelación (Checkbox) -->
+    <div class="campo">
+      <label>
+        <input type="checkbox" id="politica"> Acepto las políticas de cancelación
+      </label>
+      <div class="error" id="errorPolitica">Debes aceptar la política de cancelación para continuar.</div>
+    </div>
+
+    <button type="submit">Confirmar Reserva</button>
+  </form>
+
+  <script src="ejercicio2.js"></script>
+</body>
+</html>
