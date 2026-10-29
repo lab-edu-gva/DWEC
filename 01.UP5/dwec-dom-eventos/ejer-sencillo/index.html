@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Reto 30 min - Avisos DOM</title>
+  <style>
+    body { font-family: sans-serif; margin: 20px; background: #f9f9f9; }
+    .form-box { margin-bottom: 20px; display: flex; gap: 10px; }
+    .aviso { background: white; padding: 12px; margin-bottom: 10px; border-radius: 6px; border-left: 6px solid #ccc; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    .aviso.alta { border-left-color: #f44336; }
+    .aviso.media { border-left-color: #ff9800; }
+    .aviso.baja { border-left-color: #4caf50; }
+    .aviso.leido { opacity: 0.5; text-decoration: line-through; }
+    .acciones { margin-top: 8px; }
+  </style>
+</head>
+<body>
+
+  <h2>Gestor de Avisos (Pendientes: <span id="numPendientes">0</span>)</h2>
+
+  <form id="formAviso" class="form-box">
+    <input type="text" id="textoAviso" placeholder="Escribe un aviso..." required>
+    <select id="prioridadAviso">
+      <option value="alta">Alta</option>
+      <option value="media">Media</option>
+      <option value="baja">Baja</option>
+    </select>
+    <button type="submit">Añadir</button>
+  </form>
+
+  <div id="contenedorAvisos"></div>
+
+  <script src="solucion.js"></script>
+</body>
+</html>
