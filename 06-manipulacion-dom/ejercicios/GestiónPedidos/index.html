@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Panel de Pedidos</title>
+  <style>
+    body { font-family: sans-serif; margin: 20px; background: #f8f9fa; }
+    table { width: 100%; border-collapse: collapse; background: white; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+    th { background-color: #343a40; color: white; }
+    
+    /* Estados de la fila */
+    tr.completado { background-color: #d4edda; }
+    tr.completado td.estado { color: #155724; font-weight: bold; }
+    
+    .btn { padding: 6px 12px; cursor: pointer; border: none; border-radius: 4px; }
+    .btn-cant { background: #6c757d; color: white; font-weight: bold; }
+    .btn-completar { background: #28a745; color: white; }
+    .btn-eliminar { background: #dc3545; color: white; }
+    .resumen { margin-top: 15px; font-size: 1.2em; font-weight: bold; }
+  </style>
+</head>
+<body>
+
+  <h2>Gestión de Pedidos del Cliente</h2>
+
+  <table id="tablaPedidos">
+    <thead>
+      <tr>
+        <th>Producto</th>
+        <th>Precio Unitario</th>
+        <th>Cantidad</th>
+        <th>Subtotal</th>
+        <th>Estado</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr data-precio="15">
+        <td class="nombre-prod">Teclado USB</td>
+        <td>15 €</td>
+        <td>
+          <button class="btn btn-cant btn-menos">-</button>
+          <span class="cant-num">1</span>
+          <button class="btn btn-cant btn-mas">+</button>
+        </td>
+        <td class="subtotal">15 €</td>
+        <td class="estado">Pendiente</td>
+        <td>
+          <button class="btn btn-completar">Completar</button>
+          <button class="btn btn-eliminar">Eliminar</button>
+        </td>
+      </tr>
+      <tr data-precio="25">
+        <td class="nombre-prod">Ratón Inalámbrico</td>
+        <td>25 €</td>
+        <td>
+          <button class="btn btn-cant btn-menos">-</button>
+          <span class="cant-num">2</span>
+          <button class="btn btn-cant btn-mas">+</button>
+        </td>
+        <td class="subtotal">50 €</td>
+        <td class="estado">Pendiente</td>
+        <td>
+          <button class="btn btn-completar">Completar</button>
+          <button class="btn btn-eliminar">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="resumen">
+    Total Pedido: <span id="totalGeneral">65</span> €
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

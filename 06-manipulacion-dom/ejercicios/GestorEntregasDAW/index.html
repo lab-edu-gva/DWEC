@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Gestor de Entregas DAW</title>
+  <style>
+    body { font-family: sans-serif; margin: 20px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+    th, td { border: 1px solid #ccc; padding: 10px; text-align: left; }
+    th { background-color: #f0f0f0; }
+    
+    /* Clases de estado */
+    tr.entregado { background-color: #e8f5e9; }
+    tr.entregado td.estado-texto { color: #2e7d32; font-weight: bold; }
+    
+    .btn { padding: 5px 10px; cursor: pointer; margin-right: 5px; }
+    .btn-estado { background-color: #2196f3; color: white; border: none; }
+    .btn-borrar { background-color: #f44336; color: white; border: none; }
+  </style>
+</head>
+<body>
+
+  <h2>Listado de Entregas - Práctica DOM</h2>
+
+  <table id="tablaEntregas">
+    <thead>
+      <tr>
+        <th>Alumno/a</th>
+        <th>Tarea</th>
+        <th>Estado</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Laura Martínez</td>
+        <td>Validación de Formularios</td>
+        <td class="estado-texto">Pendiente</td>
+        <td>
+          <button class="btn btn-estado"><span>Cambiar Estado</span></button>
+          <button class="btn btn-borrar">Eliminar</button>
+        </td>
+      </tr>
+      <tr>
+        <td>Carlos Gómez</td>
+        <td>Validación de Formularios</td>
+        <td class="estado-texto">Pendiente</td>
+        <td>
+          <button class="btn btn-estado"><span>Cambiar Estado</span></button>
+          <button class="btn btn-borrar">Eliminar</button>
+        </td>
+      </tr>
+      <tr>
+        <td>Ana Belén Rius</td>
+        <td>Validación de Formularios</td>
+        <td class="estado-texto">Pendiente</td>
+        <td>
+          <button class="btn btn-estado"><span>Cambiar Estado</span></button>
+          <button class="btn btn-borrar">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script src="app.js"></script>
+</body>
+</html>  
