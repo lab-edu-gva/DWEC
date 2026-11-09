@@ -8,7 +8,6 @@ estado: preparado
 ra: RA3
 publicar: true
 ---
-
 # S06 — Reto integrador: registro de actividad
 
 ## Situación
